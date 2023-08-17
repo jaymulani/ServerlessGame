@@ -1,0 +1,11 @@
+{   "appName":"trivia",
+    "components":[
+        "question",
+        "game",
+        "team",
+        "category",
+        "difficulty",
+        "gameQuestion",
+        "gameTeam"
+    ]
+}

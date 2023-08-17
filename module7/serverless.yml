@@ -1,0 +1,21 @@
+app: administration
+service: administration
+frameworkVersion: "3"
+
+provider:
+  name: aws
+  runtime: nodejs18.x
+  httpApi:
+    cors: true
+  iam:
+    role: arn:aws:iam::594577747972:role/LabRole
+
+functions:
+  any:
+    handler: index.handler
+    name: trivia-administration
+    events:
+      - http:
+          path: /{proxy+}
+          method: ANY
+          cors: true
